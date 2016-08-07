@@ -1,5 +1,4 @@
 # import this
-from xdg.Menu import sort
 
 L = " Beautiful is better than ugly.\n\
 Explicit is better than implicit.\n\
