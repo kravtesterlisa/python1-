@@ -1,5 +1,6 @@
-#import this
-L= " Beautiful is better than ugly.\n\
+# import this
+
+L = " Beautiful is better than ugly.\n\
 Explicit is better than implicit.\n\
 Simple is better than complex.\n\
 Complex is better than complicated.\n\
@@ -18,25 +19,38 @@ Although never is often better than *right* now.\n\
 If the implementation is hard to explain, it's a bad idea.\n\
 If the implementation is easy to explain, it may be a good idea.\n\
 Namespaces are one honking great idea -- let's do more of those! "
-#print L
+# print L
 
-M = 'kravtesterlisa@gmail.com'
-N =  M + L
-#print N
-#print C
-print N[ ::17].swapcase().strip()
-New_list =  N[ ::17].swapcase().strip()
+# test L = 'bbbwww'
 
-index = 0
-for value in New_list:
-    print ( index, value )
-    index = index + 1
+# create new dict
+Dict = {}
 
+# find new letter
 
+for letter in L:
+    if not Dict.has_key(letter):
+        Dict[letter] = 1
+    else:
+        Dict[letter] += 1
 
-
-
+# print Dict
 
 
+# print this list vertically
+s = Dict.keys()
+s = list(s)
+s.sort()
+for i in s:
+    print (i, Dict[i])
 
 
+# sort by the frequency number
+
+s = Dict.keys()
+s = list(s)
+n = input('Sort by frequency:')
+n = int (n)-1
+s.sort(key=lambda i: i[n])
+for i in s:
+    print ('%7s' % (i[0]))
